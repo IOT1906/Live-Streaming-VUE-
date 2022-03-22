@@ -1,11 +1,52 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import Home from '../views/Home.vue'
+import Menu from '../views/Menu.vue'
+import Sinatv from '../views/Sinatv.vue'
+import room from '../views/room.vue'
+import Add_Merchandise from '../views/Add_Merchandise.vue'
+import Login from '../views/Login.vue'
 
 const routes = [
   {
-    path: '/',
+    path: '/Home',
     name: 'Home',
     component: Home
+  },
+  {
+    path: '/Sinatv',
+    name: 'Sinatv',
+    component: Sinatv,
+  },
+  {
+    path: '/',
+    name: 'Login',
+    component: Login,
+  },
+  //创建直播间
+  {
+    path: '/room',
+    name: 'room',
+    component: room
+  },
+  //添加商品
+  {
+    path: '/Add_Merchandise',
+    name: 'Add_Merchandise',
+    component: Add_Merchandise
+  },
+  //左侧菜单
+  {
+    path: '/Menu',
+    name: 'Menu',
+    component: Menu,
+    children: [
+      {
+        path: '/Sinatv',
+        name: 'Sinatv',
+        component: Sinatv,
+      },
+      
+    ]
   },
   {
     path: '/about',
