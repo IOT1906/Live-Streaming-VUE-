@@ -2,9 +2,12 @@ import { createApp } from 'vue'
 import App from './App.vue'
 import router from './router'
 import store from './store'
+//配置axios文件
 import axios from 'axios'
-import element from 'element-plus'
+//配置element-plus文件
+import ElementPlus from 'element-plus'
 import 'element-plus/theme-chalk/index.css'
-const app = createApp(App)
+//使用axios
+const app=createApp(App)
 app.config.globalProperties.$axios=axios
-app.use(element).use(store).use(router).mount('#app')
+app.use(store).use(router).use(ElementPlus).mount('#app')

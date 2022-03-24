@@ -5,6 +5,7 @@ import Sinatv from '../views/Sinatv.vue'
 import room from '../views/room.vue'
 import Add_Merchandise from '../views/Add_Merchandise.vue'
 import Login from '../views/Login.vue'
+import Order_and_settlement from '../views/Order_and_settlement.vue'
 
 const routes = [
   {
@@ -27,6 +28,12 @@ const routes = [
     path: '/room',
     name: 'room',
     component: room
+  },
+  //订单结算
+  {
+    path: '/Order_and_settlement',
+    name: 'Order_and_settlement',
+    component: Order_and_settlement
   },
   //添加商品
   {
